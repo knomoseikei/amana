@@ -1,0 +1,5 @@
+Amana 2.2
+Copyright 2012 Knomo Seikei, RMLabs
+
+This product includes software developed by third persons.
+More info about this on http://code.google.com/p/amana
