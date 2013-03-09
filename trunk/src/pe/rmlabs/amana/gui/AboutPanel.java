@@ -139,7 +139,7 @@ public class AboutPanel extends JPanel {
 		label_10.setHorizontalAlignment(SwingConstants.CENTER);
 		label_10.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		
-		JLabel label_11 = new JLabel("<html>(**)Special thanks to (in alphabetical order): All CarbonGames developers (specially Ken for the help!), Broadside, ChroniX, ComponEMT, DeathofaStar, GeneralRay, jhamm, KittenAqua, Kutai, Liquidsnake3(Solid_Snake3133), MrN0b0di, pepote, rigelglen, SP0TFIR3, Tetsuken, Triplicity, Ununoctio, Virtuallazy. <html>");
+		JLabel label_11 = new JLabel("<html>(**)Special thanks to (in alphabetical order): All CarbonGames developers (specially Ken for the help!), Broadside, ChronicX, ComponEMT, DeathofaStar, GeneralRay, jhamm, KittenAqua, Kutai, Liquidsnake3(Solid_Snake3133), MrN0b0di, pepote, rigelglen, SP0TFIR3, Tetsuken, Triplicity, Ununoctio, Virtuallazy. <html>");
 		GridBagConstraints gbc_label_11 = new GridBagConstraints();
 		gbc_label_11.fill = GridBagConstraints.HORIZONTAL;
 		gbc_label_11.anchor = GridBagConstraints.NORTHWEST;

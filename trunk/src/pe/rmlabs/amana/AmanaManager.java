@@ -21,7 +21,7 @@ import pe.rmlabs.amana.domain.GameMode;
 import pe.rmlabs.amana.gui.AirMechReplayLabelGroup;
 import pe.rmlabs.amana.gui.PlayerLoadoutPanel;
 import pe.rmlabs.amana.loader.ConfigManager;
-import pe.rmlabs.amana.loader.ReplayInfoReader;
+import pe.rmlabs.amana.loader.ReplayInfoReader2;
 import pe.rmlabs.amana.loader.SpriteStore;
 
 public abstract class AmanaManager {
@@ -52,7 +52,7 @@ public abstract class AmanaManager {
 				if (f.getName().equals("replay999_p9.replayInfo") || f.getName().equals("dnd1324.replayInfo")) {
 					f.delete();
 				} else {
-					AirMechReplayInfo amri = ReplayInfoReader.readReplayInfoFile(f);
+					AirMechReplayInfo amri = ReplayInfoReader2.readReplayInfoFile(f);
 					if (amri != null) {
 						llAmr.add(amri);
 					}
@@ -64,13 +64,10 @@ public abstract class AmanaManager {
 
 	public static void openPcReplaysFolder() {
 		try {
-			// Runtime.getRuntime().exec("explorer " +
-			// ConfigManager.get().getAppDataPath() +
-			// "\\Carbon\\.debug\\replay\\");
 			if (ConfigManager.get().validReplaysPcPath()) {
 				Runtime.getRuntime().exec("explorer " + ConfigManager.get().getProperty("REPLAYS_PC_PATH"));
 			} else {
-				JOptionPane.showMessageDialog(null, "Looks like your Steam Replays Folder must be wrong, go fix it in Settings tab.", "Whoops!",
+				JOptionPane.showMessageDialog(null, "Looks like your Pc Replays Folder must be wrong, go fix it in Settings tab.", "Whoops!",
 						JOptionPane.INFORMATION_MESSAGE, SpriteStore.get().getSprite("ratchet.png"));
 			}
 		} catch (IOException e) {
@@ -84,9 +81,6 @@ public abstract class AmanaManager {
 
 	public static void openSteamReplaysFolder() {
 		try {
-			// Runtime.getRuntime().exec("explorer " +
-			// ConfigManager.get().getAppDataPath() +
-			// "\\Carbon\\AirMechSteam\\.debug\\replay\\");
 			if (ConfigManager.get().validReplaysSteamPath()) {
 				Runtime.getRuntime().exec("explorer " + ConfigManager.get().getProperty("REPLAYS_STEAM_PATH"));
 			} else {

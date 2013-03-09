@@ -6,7 +6,7 @@ public class AirMechPlayer {
 	private Mech airmech;
 	private Pilot pilot;
 	private Item item;
-	private String color;
+	private Color color;
 	private Flair flair1;
 	private Flair flair2;
 	private Flair flair3;
@@ -43,10 +43,10 @@ public class AirMechPlayer {
 	public void setItem(Item item) {
 		this.item = item;
 	}
-	public String getColor() {
+	public Color getColor() {
 		return color;
 	}
-	public void setColor(String color) {
+	public void setColor(Color color) {
 		this.color = color;
 	}
 	public Flair getFlair1() {
